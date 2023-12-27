@@ -1,14 +1,9 @@
-464
-Question: 狗日的开源软件许可证
+Question: 开源软件许可证有什么问题？
 作者：陈皓，左耳朵耗子
-
 你知道这个世上有多少种开源软件的许可证吗？GPL，BSD，MIT，Apache？GNU上有个网页，上面记录了几乎所有的开源软件的许可证，真TMD的多，有开源的，有商用的，有软件的，有文档的，多得你都不想看了，天杀的，程序员们还真能鼓捣啊。不过，主流的也就几种——GPL、BSD、MIT、Mozilla、Apache等等。
 那么，你知道怎么区别他们吧？怎么选择他们吗？这里有一张比较复杂的图，在调侃这些纷繁的许可证（我不翻译了，这个图属于是发泄不满）
-
 下面是另一个图，这个图来自这里，这个图并不恶搞，但其非常简单地说明了如何选择一个开源的许可证：
-
 最后，正如那些BT雷人的程序语言一样，我想介绍两个比较独特的开源软件许可证给你，以辉映本文的标题——
-
 1. WTFPL全称 What The Fuck Public License，这个许可证单从名字上就那么NB了，其许可证如下，相当的短，完全的自由，你的开源软件有自信用这个许可证吗？
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE Version 2, December 2004 Copyright (C) 2004 Sam Hocevar email protected
 Everyone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed. DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 0. You just DO WHAT THE FUCK YOU WANT TO.

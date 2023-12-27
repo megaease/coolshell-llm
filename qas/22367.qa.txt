@@ -1,10 +1,5 @@
-1977
 Question: 聊聊 nostr 和 审查
 作者：陈皓，左耳朵耗子
-
-这两天在网络上又有一个东西火了，Twitter 的创始人 @jack 新的社交 iOS App Damus 上苹果商店（第二天就因为违反中国法律在中国区下架了），这个软件是一个去中心化的 Twitter，使用到的是 nostr – Notes and Other Stuff Transmitted by Relays 的协议（协议简介，协议细节），协议简介中有很大的篇幅是在批评Twitter和其相类似的中心化的产品，如：Mastodon 和 Secure Scuttlebutt 。我顺着去看了一下这个协议，发现这个协议真是非常的简单，简单到几句话就可以讲清楚了。
-目录
-通讯过程 技术细节摘要 如何对抗网络审查 如何对抗Spam和骗子 怎么理解审查
 通讯过程
 这个协议中有两个东西，一个是 client，一个是 relay，client 就是用户社交的客户端，relay 就是转发服务器。 用户不需要注册，用户只需要有一个密钥对（公钥+私钥）就好了，然后把要发的信息做签名，发给一组 relays 然后你的 Follower 就可以从这些 relays 上订阅到你的信息。
 技术细节摘要

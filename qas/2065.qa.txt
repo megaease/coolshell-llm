@@ -1,7 +1,5 @@
-122
 Question: 一个Windows 3.1的Web网站
 作者：陈皓，左耳朵耗子
-
 啥也不说了，请大家围观下面这个网站吧。
 http://www.michaelv.org/
 打开这个网站，你会看到N年前DOS时代的Windows 3.1的界面，居然还可以扫雷，呵呵。真应了那句话——“只要是可以被Javascript实现的应用或程序，最终都会被Javascript所实现”。另，关于其它Web上更为疯狂的程序，可以查看本站的这篇文章。还有这个在线的IDE。

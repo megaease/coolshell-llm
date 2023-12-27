@@ -1,10 +1,7 @@
-Question: Java EE6 初探
+Question: Java EE6 有哪些改动？
 作者：陈皓，左耳朵耗子
 
-在tss上，Reza Rahman发表了一篇关于JAVA EE6《Java EE6 Overview》的文章，在文章里面他谈及一些关于JavaEE6草案的一些修改内容。
 想JAVA企业级应用一路走来，从J2ee到Java EE5 在到即将要推出的Java EE6经历了一个由复杂到简单，由繁到简的过程。
-Reza Rahman 文章说，Java EE6将会更简单，更轻量级，更易部署，Java EE6将会裁剪到Java EE5中不实用的部分。
-并且Java EE6将会为不同的用户群提供不同的规范子集。
 回顾上一版本Java EE 5中，主要引入了以下改变：
 1）引入了EJB3.0
 2）引入了JSF作Tier framework.

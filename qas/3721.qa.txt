@@ -1,7 +1,5 @@
-216
-Question: Stack Exchange 的架构
+Question: Stack Exchange 的架构是怎么样的？
 作者：陈皓，左耳朵耗子
-
 近日，Stack Exchange系统管理员blog上发布了一篇关于Stack Exchange的架构一瞥，其包括了Stack Overflow, Server Fault 和 Super User的 Stack Exchange 网络。注意最后一个关于人员的配置。希望能给大家一些相关的参考。
 网络流量 每月9千5百万个PV 每秒800 HTTP 请求 每秒180 DNS 请求 每秒55Mb 的带宽
 数据中心 1 机柜 位于俄勒冈的 Peak Internet (用于chat 和Data Explorer) 2 机框 位于 纽约的 Peer 1 ( 用于其它的 Stack Exchange Network)

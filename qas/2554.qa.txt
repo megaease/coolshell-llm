@@ -1,9 +1,5 @@
-502
 Question: Eclipse 3.6 （Helios）新特性
 作者：陈皓，左耳朵耗子
-
-2010年6月23日 Eclipse 3.6 Helios 正式发布，对 Java 程序员来说有哪些新特性值得关注？
-
 1、检查并报告是否有缺失的 @Override 注解，此功能仅对 Java 1.6 版本适用。在以前版本中，当我们为一个方法加上 @Override 注解，但是这个方法实际上并没有过载（override）任何父类的方法时，将会得到警告信息。在新版本中，如果我们忘记为一个过载方法加上 @Override 注解，同样也会得到警告信息。
 2、变量视图中新增了一个列用于显示当前变量类型的实例数（Layout -> Select Column）。
 3、Java 视图中的包名称可以用自定义的规则来显示（Window –> Preferences –> Java –> Appearance）。

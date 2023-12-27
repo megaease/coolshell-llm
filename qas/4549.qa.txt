@@ -1,9 +1,4 @@
-693
-Question: Facebook 的系统架构
-作者：陈皓，左耳朵耗子
-
-来源 ：http://www.quora.com/What-is-Facebooks-architecture （由Micha?l Figuière回答）
-根据我现有的阅读和谈话，我所理解的今天Facebook的架构如下：
+Question: Facebook 的系统架构是怎样的？
 Web 前端是由 PHP 写的。Facebook 的 HipHop 会把PHP转成 C++ 并用 g++编译，这样就可以为模板和Web逻贺业务层提供高的性能。业务逻辑以Service的形式存在，其使用Thrift。这些Service根据需求的不同由PHP，C++或Java实现（也可以用到了其它的一些语言……）用Java写的Services没有用到任何一个企业级的应用服务器，但用到了Facebook自己的定制的应用服务器。看上去好像是重新发明轮子，但是这些Services只被暴露给Thrift使用（绝大所数是这样），Tomcat太重量级了，即使是Jetty也可能太过了点，其附加值对Facebook所需要的没有意义。
 持久化由MySQL, Memcached, Facebook 的 Cassandra, Hadoop 的 HBase 完成。Memcached 使用了MySQL的内存Cache。Facebook 工程师承认他们的Cassandra 使用正在减少因为他们更喜欢HBase，因为它的更简单的一致性模型，以到其MapReduce能力。离线处理使用Hadoop 和 Hive。日志，点击，feeds数据使用Scribe，把其聚合并存在 HDFS，其使用Scribe-HDFS，因而允许使用MapReduce进行扩展分析。
 BigPipe 是他们的定制技术，用来加速页面显示。Varnish Cache 用作HTTP代理。他们用这个的原因是高速和有效率。 用来搞定用户上传的十亿张照片的存储，其由Haystack处理，Facebook自己开发了一个Ad-Hoc存储方案，其主要做了一些低层优化和“仅追加”写技术 .Facebook Messages 使用了自己的架构，其明显地构建在了一个动态集群的基础架构上。业务逻辑和持久化被封装在一个所谓的’Cell’。每个‘Cell’都处理一部分用户，新的‘Cell’可以因为访问热度被添加。 持久化归档使用HBase。

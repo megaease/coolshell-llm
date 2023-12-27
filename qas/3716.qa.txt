@@ -1,9 +1,5 @@
-1549
 Question: WordPress是怎么赢的？
 作者：陈皓，左耳朵耗子
-
-一个以前在Six Apart工作4年的产品经理 Byrne Reese 发布了一篇文章阐述为什么WordPress成为了赢家。其在文章中比较了WordPress和其主要竞争对手产品Movable Type。我觉得其中有可取之处，本想全文翻译的，后来觉得文章太长，翻译太花时间，所以，我把文章中的观点总结如下。
-作者例举了如下为什么WordPress会赢的理由：
 一、Movable Type许可证，而WordPress是开源的
 2004年，Movable Type修改了其许可证，这一举动激怒了所有Movable Type的用户，于是大家纷纷转投Wordpress，这是WordPress最终成为赢家最大的原因。就算是Movable Type有着优越的设计，优越的功能，还有优越的技术支持，但是面对的是一个完全免费的产品也没有办法。因为WordPress是开源的，开源就意味着完全免费，而Movable Type一开始也是免费的，但是其许可证策略有着很不确定的因素。（注：2007年Movable Type发布了开源版本）
 二、WordPress很容易安装
@@ -23,5 +19,4 @@ Six Apart收购Apperceptive并没有错，而且还有很不错的利润增涨�
 九、Six Apart 自己的失败
 作者归结为一点：Six Apart严重地阻碍了自己的竞争力，因为其把自己的精力分布在了很多产品上。简而言之一句话——没有专注。如果Six Apart专注地做一个事，比如就做TypePad 或是 Movable Type，那么，今天的情况可能会很不一样。虽然，WordPress还是无可质疑地会成为最流行的Blog，但是他依然会面对着强大的对手，双方需要不停地在创新和技术上比拼。
 最后，作者说，目前这个世界上有WordPress, Drupal, Expression Engine, Movable Type, Simple CMS, TypePad, Twitter, Instagram, Tumblr,或是其它东西。作者让大家扪心自问——“是否WordPress是最好的产品？”作者依然认为 Movable Type 是最好的产品。其今天还是成为了很多商业公司的首选。
-我个人觉得Blog的用户群其实对Blog的需求其实并不多，只需要可以发布文章，有评论，可以在边栏上添加一些小饰件，可以改变一下样式，最好自己的文章有人帮着做做推广什么的，基本上就是这个样子。所以，像新浪，搜狐这样提供商其实更好。更多的用户是不会去搭建自己的专有的blog的。所以，能自己搭建自己的blog的这群人，还是以技术人员偏多，而WordPress正好满足了技术人员的胃口。（老实说，WordPress的后台操作对于非技术人员的电脑用户来说还是很不够友好——太复杂，性能上好像也不是很好，插件多是多，但好的插件就那么几个）
 来自：酷壳网 CoolShell

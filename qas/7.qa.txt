@@ -1,5 +1,4 @@
-882
-Question: 你应该知道的20个Ajax技术(01-10)
+Question:有哪些 Ajax 技术值得学习？
 作者：陈皓，左耳朵耗子
 
 1) TextboxList自动完成
@@ -20,7 +19,10 @@ Ajax IM是一个很牛的即时聊天的客户端，你可以使用它制作一�
 5）Ajax 式文件上传
 使用Ajax上传文件会让用户得到非常好的用户体验，上网随例搜索一下，有太多太多的各式各样的文件上传的Ajax源码可以使用。然而，在coderproject网站有，你可以下载到一款非常小又非常好的Ajax程序，网址如下：。
 当然，如果你要一次上传多个文件，那个这个小程序还不足以满足你。不过，你可以使用JQuery的JQUploader。
+来自：酷壳网 CoolShell
 
+Question:还有哪些有哪些 Ajax 技术值得学习5-10？
+作者：陈皓，左耳朵耗子
 6）Fancy Upload
 更为迷人的文件上传程序，你可以试试Fancy Upload，它通非常优秀的Javascript框架MooTools()构造。
 

@@ -1,7 +1,5 @@
-3705
 Question: 由苹果的低级Bug想到的
 作者：陈皓，左耳朵耗子
-
 2014年2月22日，在这个“这么二”的日子里，苹果公司推送了 iOS 7.0.6（版本号11B651）修复了 SSL 连接验证的一个 bug。官方网页在这里：，网页中如下描述：
 Impact : An attacker with a privileged network position may capture or > modify data in sessions protected by SSL/TLS > > Description : Secure Transport failed to validate the authenticity of > the connection. This issue was addressed by restoring missing validation > steps.
 也就是说，这个bug会引起中间人攻击，bug的描述中说，这个问题是因为miss了对连接认证的合法性检查的步骤。
@@ -14,6 +12,11 @@ Adam Langley的《Apple’s SSL/TLS bug 》的博文暴出了这个bug的细节�
 如果你喜欢XKCD，你一定会想到这个漫画：
 注意 ：这个bug不会影响TLS 1.2版本，因为1.2版本不会用这个函数，走的是另一套机制。但是别忘了client端是可以选择版本的。
 如果你想测试一下你的浏览器是否会有问题， 你可以上一下当天就上线的 https://gotofail.com 网站
+来自：酷壳网 CoolShell
+
+
+Question: 由苹果的低级Bug想到的（二）
+作者：陈皓，左耳朵耗子
 一些思考
 下面是我对这个问题的一些思考。
 0）关于编译报警
@@ -31,6 +34,11 @@ Adam Langley的《Apple’s SSL/TLS bug 》的博文暴出了这个bug的细节�
 只要有足够多的时间，我们是可以对所有的功能点，所有的函数都做UT，也可以去追求做代码覆盖和分支覆盖一样。但有一点我们却永远无法做到，那就是——穷举所有的负面案例 。所以，对于测试来说，我们不能走极端，需要更聪明的测试。就像我在《我们需要专职的QA》文章里的说过的—— 测试比coding难度大多了，测试这个工作只有高级的开发人员才做得好。我从来不相信不写代码的人能做好测试。
 这里， 我并不是说通过测试来发现这个问题的可能性不大，我想说的是，测试很重要，单测更重要。但是，我们无法面面俱到 。在我们没有关注到的地方，总会发生愚蠢的错误。
 P.S.，在各大网站对这个事的讨论中，我们可以看到OS X下的curl命令居然可以接受一个没有验证过的IP地址的https的请求，虽然现在还没有人知道这事的原因，但是，这可能是没有在测试中查到的一个原因。
+来自：酷壳网 CoolShell
+
+
+Question: 由苹果的低级Bug想到的（三）
+作者：陈皓，左耳朵耗子
 3）关于编码风格
 对于程序员来说，在C语言中，省掉语句大括号是一件非常不明智 的事情。如我们强制使用语句块括号，那么，这两个goto fail都会在一个if的语句块里，而且也容易维护并且易读。（另外，通过这个bug，我们可以感受到，像Python那样，用缩进来表示语句块，的确是挺好的一件事）
 也有人说，如果你硬要用只有单条语句，且不用语句块括号，那么，这就是一条语句，应该放在同一行上。如下所示：if (check_something) do_something();
@@ -55,6 +63,11 @@ Rubin找了一些惯用goto和不用goto的程序员来解题，发现用goto的
 （ 花絮 ：以后几个月的CACM热闹死了。编辑收到许多回应，两个月后刊出了其中五篇。文章也包括了《“‘GOTO Considered Harmful’ Considered Harmful” Considered Harmful? 》）
 对于我而言，goto语句的弊远远大于利，在99%的情况下，我是站在反goto这边的 。Java和Python就没有提供Goto语句，原因就是因为goto语句很容易被滥用！
 更新：2014年3月5日 – RedHat 近日也发现个GnuTLS安全问题，与苹果的类似：无法正确检验特定的伪造SSL证书，这个总是会将伪造证书识别为有效证书。虽然Redhat的代码为if加上了花括号，但还是因为没有控制好goto，造成了bug。所以说啊，goto语句的坑是很多。
+来自：酷壳网 CoolShell
+
+
+Question: 由苹果的低级Bug想到的（四）
+作者：陈皓，左耳朵耗子
 BUG页面：
 goto语句在写代码的时候也许你会很爽，但是在维护的时候，绝对是一堆坑！redhat的这个patch为原来本来只有一个label的goto又加了另一个label，现在两个label交差goto，继续挖坑……
 总结

@@ -1,8 +1,4 @@
-495
 Question: JRuby核心成员投奔Engine Yard
-作者：陈皓，左耳朵耗子
-
-新闻来源：Computer World
 Sun公司的JRuby团队正在离开他们的老东家Sun，投奔Engine Yard公司。他们声称这是因为Oracle并购Sun后的前途不明朗的原因。Sun的新闻发言人已确定了这一消息的真实性。
 在两年半前，Sun招募了Charles Nutter 和Thomas Enebo，这两人叫“the JRuby Guys”，他们主要实现在Java虚似机上运行Ruby，后来Sun又招了一个叫Nick Sieger的人。今天，这三个核心开发人员会在下周一的时候到新公司上班。他们认为Oracle可能会不支持他们继续在JVM上运行Ruby这个事情，而JRuby又是他们的未来。
 Engine Yard。成立仅两年、总部设在旧金山的Engine Yard，主要业务是为使用开放原始码开发环境Ruby on Rails的开发者处理系统布署和作业等事项。该公司协助开发者透过所谓的云计算，或第三方数据中心，执行应用软件。Engine Yard曾经从New Enterprise Associates和Amazon.com两家公司募得投资1500万美元。该公司正在进行云计算平台上的Rails计划。

@@ -1,8 +1,4 @@
-1065
 Question: C++模板”>>”编译问题与词法消歧设计
-作者：陈皓，左耳朵耗子
-
-（感谢@文艺复兴记（todd） 投递此文）
 在编译理论中，通常将编译过程抽象为5个主要阶段：词法分析(Lexical Analysis)，语法分析(Parsing)，语义分析(Semantic Analysis)，优化(Optimization)，代码生成(Code Generation)。这5个阶段类似Unix管道模型，上一个阶段的输出作为下一个阶段的输入。其中，词法分析是根据输入源代码文本流，分割出词，识别类别，产生词法元素(Token)流，如：int a = 10;
 ​经过词法分析会得到[(Type, “int”), (Identifier, “a”), (AssignOperator, “=”), (IntLiteral, 10)]，在后续的语法分析阶段，就会根据这些词法元素匹配相应的语法规则。在我学习编译原理时，教科书中对于词法分析的介绍主要是基于正则表达式的，言下之意就是普通语言的词法规则是可以通过正则表达式描述的。比如，C语言的变量名规则是“包含字母、数字或下划线，并且以字母或下划线开头”，这就可以用正则表达式[a-zA-Z_][a-zA-Z0-9_]表达。但是，在实践中我发现不管是主流语言，还是自己设计的DSL都大量存在不能简单通过正则表达式进行词法分析的例子。来看C++98的模版例子：map<int, vector<int>>
 上面这段代码会被C++98编译器中报语法错误，原因在于它把“>>”识别成了位右移运算符而不是两个模版右括号，在C++98中必须在两个括号中间加空格，写成map<int, vector<int> >
@@ -12,6 +8,5 @@ Scannerless Parsing方法弥补了词法规则无法消歧的问题，但是同�
 下面我们再来看看C++11规范关于这个问题的定义：
 14.2 Names of template specializations [temp.names] > > After name lookup (3.4) finds that a name is a template-name or that an > operator-function-id or a literal-operator-id refers to a set of overloaded > functions any member of which is a function template if this is followed by > a <, the < is always taken as the delimiter of a template-argument-list and > never as the less-than operator. When parsing a template-argument-list, the > first non-nested > is taken as the ending delimiter rather than a greater- > than operator. Similarly, the first non-nested >> is treated as two > consecutive but distinct > tokens, the first of which is taken as the end of > the template-argument-list and completes the template-id. [ Note: The second > > token produced by this replacement rule may terminate an enclosing > template-id construct or it may be part of a different construct (e.g. a > cast).—end note ]
 可见，在C++11中，词法分析器是把”>>”直接当成两个”>”传给了语法分析器，然后在语法分析中如果匹配了template-argument- lis语法，第一个”>”符号会被直接认为是模版结束符，而不是大于，也不是位移符号。根据这个定义，我构造了一个例子：template<int N> class Foo { };Foo<3>>1> foo;
-
 这个例子在C++98中是能正确编译的，”>>”被解释成了位移运算，但是它反而不能在C++11中编译了，因为根据规范第一个”>”被解释成了模版参数结束符。如果要在C++11中编译，需要显式地加上括号：Foo<(3>>1)> foo;
 来自：酷壳网 CoolShell
