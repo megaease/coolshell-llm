@@ -22,7 +22,7 @@
 
 ### 演示示例
 
-我们已经在 huggingface 上载了基于 `qa.json` 文件微调得到的模型结果，你可以在此[地址](https://huggingface.co/zhaokun/coolshell-llm)下载试用。
+我们已经在 Hugging Face 上载了基于 `qa.json` 文件微调得到的模型结果，你可以在此[Hugging Face 模型地址](https://huggingface.co/zhaokun/coolshell-llm)下载试用。
 
 试用方法如下：
 ```
@@ -39,7 +39,7 @@ python demo.py \
     --quantization_bit 8
 ```
 
-其中，`model_name_or_path` 参数指的是 chatglm3-6b 模型的路径，你可以从 `https://huggingface.co/THUDM/chatglm3-6b` 下载。`adapter_name_or_path` 则是我们在 huggingface 上的模型路径。`quantization_bit` 设置为 8 或 4 可以减少显存占用，但如果显存充足，这一设置也可以省略。
+其中，`model_name_or_path` 参数指的是 chatglm3-6b 模型的路径，你可以从 `https://huggingface.co/THUDM/chatglm3-6b` 下载。`adapter_name_or_path` 则是我们在 Hugging Face 上的模型路径。`quantization_bit` 设置为 8 或 4 可以减少显存占用，但如果显存充足，这一设置也可以省略。
 
 加载模型完成后，就可以开始交互了。例如：
 ```

@@ -7,7 +7,7 @@ We express our deepest gratitude to Mr. Chen Hao for his selfless sharing in the
 > An orchid in deep forest won't stop giving out aroma despite nobody appreciating it.         
 > A good man who is moral and well-behaved won't give up his principles despite poverty.
 
-This repository is organized based on Mr. Chen Hao's blog posts from [forever-coolshell](https://github.com/soulteary/forever-coolshell), with the aim to carry on and promote the spirit and wisdom of him.
+This repository is organized based on Mr. Chen Hao's blog posts from [forever-coolshell](https://github.com/soulteary/forever-coolshell), with the aim to carry on and promote the spirit and wisdom of him. 
 
 - [Data](#data)
 - [Demo](#demo)
@@ -21,7 +21,7 @@ We have organized the data in the repository according to the data format of the
 
 ### Demo
 
-We have uploaded the model results fine-tuned based on the `qa.json` file on huggingface, which you can download and try from this [link](https://huggingface.co/zhaokun/coolshell-llm).
+We have uploaded the model results fine-tuned based on the `qa.json` file on Hugging Face, which you can download and try from this [Hugging Face Repo](https://huggingface.co/zhaokun/coolshell-llm).
 
 
 The method of use is as follows:
@@ -41,7 +41,7 @@ python demo.py \
     --quantization_bit 8
 ```
 
-Here, the `model_name_or_path` parameter refers to the path of the `chatglm3-6b` model, which you can download from `https://huggingface.co/THUDM/chatglm3-6b`. The `adapter_name_or_path` is our model path on huggingface. The quantization_bit set to 8 or 4 can reduce memory usage, but this setting can be omitted if memory is sufficient.
+Here, the `model_name_or_path` parameter refers to the path of the `chatglm3-6b` model, which you can download from `https://huggingface.co/THUDM/chatglm3-6b`. The `adapter_name_or_path` is our model path on Hugging Face. The quantization_bit set to 8 or 4 can reduce memory usage, but this setting can be omitted if memory is sufficient.
 
 Once the model is loaded, you can start interacting. For example:
 
