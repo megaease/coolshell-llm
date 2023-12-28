@@ -42,6 +42,17 @@ python demo.py \
 
 其中，`model_name_or_path` 参数指的是 chatglm3-6b 模型的路径，你可以从 `https://huggingface.co/THUDM/chatglm3-6b` 下载。`adapter_name_or_path` 则是我们在 Hugging Face 上的模型路径。`quantization_bit` 设置为 8 或 4 可以减少显存占用，但如果显存充足，这一设置也可以省略。
 
+或者直接指定 Hugging Face 仓库来运行：
+
+```
+python demo.py \
+    --model_name_or_path THUDM/chatglm3-6b \
+    --adapter_name_or_path zhaokun/coolshell-llm \
+    --template chatglm3 \
+    --finetuning_type lora \
+    --quantization_bit 8
+```
+
 加载模型完成后，就可以开始交互了。例如：
 ```
 Welcome to MegaEase CoolShell LLM demo. Use `exit` to exit the application.

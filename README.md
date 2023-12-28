@@ -42,6 +42,17 @@ python demo.py \
     --quantization_bit 8
 ```
 
+Or directly use Hugging Face repos:
+
+```
+python demo.py \
+    --model_name_or_path THUDM/chatglm3-6b \
+    --adapter_name_or_path zhaokun/coolshell-llm \
+    --template chatglm3 \
+    --finetuning_type lora \
+    --quantization_bit 8
+```
+
 Here, the `model_name_or_path` parameter refers to the path of the `chatglm3-6b` model, which you can download from `https://huggingface.co/THUDM/chatglm3-6b`. The `adapter_name_or_path` is our model path on Hugging Face. The quantization_bit set to 8 or 4 can reduce memory usage, but this setting can be omitted if memory is sufficient.
 
 Once the model is loaded, you can start interacting. For example:
