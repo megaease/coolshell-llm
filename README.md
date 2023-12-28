@@ -12,6 +12,7 @@ This repository is organized based on Mr. Chen Hao's blog posts from [forever-co
 - [Data](#data)
 - [Demo](#demo)
 - [Statement](#statement)
+- [Special Thanks](#special-thanks)
 
 
 ### Data
@@ -70,3 +71,7 @@ User: exit
 The CoolShell LLM model aims to perpetuate the spirit of Mr. Chen Hao. Do not use the open-source model and code, and any derivatives produced from the open-source project, for any purpose that may harm the nation and society, or for any service that has not undergone safety assessment and registration.
 
 Although every effort has been made to ensure the compliance and accuracy of the data at every stage of model training, due to the influence of probabilistic randomness, the accuracy of output content cannot be guaranteed. Furthermore, the model's output can be easily misled by user input. This project does not assume any responsibility for data security, public opinion risks, or any risks and liabilities arising from the model being misled, abused, disseminated, or improperly utilized.
+
+
+### Special Thanks
+We are immensely grateful to [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) for providing such a feature-rich and easy-to-use LLM fine-tuning framework. Similarly, we would like to thank Zhipu AI and the KEG Laboratory of Tsinghua University for their open-source contribution to the [ChatGLM3](https://github.com/THUDM/ChatGLM3) model. Without their exceptional work, the establishment of this repository would not have been possible.
