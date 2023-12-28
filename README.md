@@ -1,5 +1,7 @@
 # CoolShell LLM <!-- omit from toc -->
 
+\[ English | [中文](./README.zh.md) \]
+
 We express our deepest gratitude to Mr. Chen Hao for his selfless sharing in the internet community, especially in the field of technology.
 
 > An orchid in deep forest won't stop giving out aroma despite nobody appreciating it.         
@@ -19,7 +21,7 @@ We have organized the data in the repository according to the data format of the
 
 ### Demo
 
-We have uploaded the model results fine-tuned based on the `qa.json` file on huggingface, which you can download and try from this link.
+We have uploaded the model results fine-tuned based on the `qa.json` file on huggingface, which you can download and try from this [link](https://huggingface.co/zhaokun/coolshell-llm).
 
 
 The method of use is as follows:

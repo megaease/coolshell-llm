@@ -1,5 +1,8 @@
 # CoolShell LLM <!-- omit from toc -->
 
+\[ [English](./README.md) | 中文 \]
+
+
 感恩陈皓先生对中文互联网，尤其是技术领域无私的分享。
 
 > 芝兰生于深谷，不以无人而不芳。   
@@ -19,7 +22,7 @@
 
 ### 演示示例
 
-我们已经在 huggingface 上载了基于 `qa.json` 文件微调得到的模型结果，你可以在此[地址]()下载试用。
+我们已经在 huggingface 上载了基于 `qa.json` 文件微调得到的模型结果，你可以在此[地址](https://huggingface.co/zhaokun/coolshell-llm)下载试用。
 
 试用方法如下：
 ```
